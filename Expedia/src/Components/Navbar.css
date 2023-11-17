@@ -1,0 +1,60 @@
+.navbar{
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbarRightMainDiv, .navbarLeftMainDiv, .shopTravelDiv{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.brandImgLarge{
+    width: 126px;
+}
+.brandImgSmall{
+    width: 75px;
+}
+.navbarRightMainDiv{
+    display: flex;
+    justify-content: start;
+}
+.shopTravelButton{
+    background-color: transparent;
+    border: transparent;
+    font-weight: 600;
+}
+.navbarLeftMainDiv{
+    display: flex;
+    gap: 20px;
+}
+.getAppTextBtn, .getAppBtn, .navbarBtn{
+    font-size: .9rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 4px;
+    font-weight: 500;
+}
+.getAppTextBtn{
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 130px;
+}
+.getAppBtn{
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 40px;
+    height: 40px;
+}
+
+.brandImgLarge:hover, .brandImgSmall:hover, .shopTravelButton:hover, .navbarBtn:hover{
+    cursor: pointer;
+    color: #1668e3;
+}
+.getAppBtn:hover, .getAppTextBtn:hover{
+    cursor: pointer;
+    background-color: #1668e314;
+}

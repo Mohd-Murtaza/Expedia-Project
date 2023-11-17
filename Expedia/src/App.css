@@ -1,0 +1,15 @@
+.swiperSlide{
+    /* width: 100px; */
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-prev{
+    background-color: brown;
+    color: white;
+}
+.swiper-button-prev::after{
+    color: aquamarine;
+}

@@ -1,0 +1,42 @@
+.searchBarMainDiv{
+    margin: auto;
+    margin-top: 4.5rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+.searchBarOptionsMainDiv{
+    margin: auto;
+    width: 100%;
+    height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.searchOptionBtn{
+    margin: auto;
+    background-color: transparent;
+    border: transparent;
+    height: 95%;
+    border-bottom: 5px solid #1668e3;
+    border: none;
+    font-weight: 600;
+    color: #191e3b;
+    padding-left:16px;
+    padding-right: 16px;
+}
+.searchOptionBtn:hover{
+    border-bottom: 5px solid #1668e3;
+}
+@media all and (max-width: 578px) {
+    .searchOptionBtn{
+        font-size: 11px;
+    }
+    .searchBarOptionsMainDiv{
+        overflow: hidden;
+    }
+}
+

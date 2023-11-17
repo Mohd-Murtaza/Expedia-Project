@@ -1,0 +1,49 @@
+body{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.recentSearchMainDiv{
+    width: 95%;
+    margin: auto;
+
+}
+h3{
+    color: #191e3b;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.recentSearchDiv{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.searchIconDiv{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+#searchIcon{
+    color: #191e3b;
+    font-size: 40px;
+}
+.detailsDiv{
+    display: flex;
+    flex-direction: column;
+}
+.locationText{
+    color: #191e3b;
+    font-size: 24px;
+}
+@media all and (max-width: 578px) {
+    .recentSearchDiv{
+        width: 60%;
+    }
+}
+@media all and (min-width: 578px) and (max-width: 990px) {
+    .recentSearchDiv{
+        width: 60%;
+        padding: 30px;
+    }
+}

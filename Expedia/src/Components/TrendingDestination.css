@@ -1,0 +1,42 @@
+.trendingDestinationMainDiv{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.trendingDestinationCard{
+    border-radius: 1rem;
+    width: 100%;
+    padding: .5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.trendingDestinationImg{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 100%;
+}
+.trendingDestinationCity{
+    margin: 1rem 1rem 0rem;
+    font-size: medium;
+    font-weight: 600;
+}
+.trendingDestinationCountry{
+    margin: 0.3rem 1rem 1rem;
+    font-size: smaller;
+    font-weight: 100;
+}
+.swiper-button-prev, .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .5s;
+
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 1rem;
+    color: #1668e3;
+    font-weight: 900;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    background-color: #ffffff93;
+}

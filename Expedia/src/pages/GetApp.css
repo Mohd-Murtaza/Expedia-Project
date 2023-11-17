@@ -1,0 +1,89 @@
+body{
+    color: #191e3b;
+}
+.getappMainDiv{
+    width: 95%;
+    margin: auto;
+    padding: 1.5rem;
+}
+.getappBannerImg{
+    width: 100%;
+    border-radius: 1rem;
+}
+.oneKeyGetappHeading, .oneKeyGetappDiscription, .getappManageText{
+    text-align: center;
+}
+.oneKeyGetappDiscription{
+    font-size: 18px;
+}
+.getappScannerDiv{
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.getappScannerTextDiv{
+    padding-right: 1.5rem;
+}
+.scannerImg{
+    width: 152px;
+    margin: auto;
+}
+.scannerText{
+    text-align: center;
+    font-size: smaller;
+}
+.getappManageDiv{
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 4%;
+    text-align: center;
+}
+.manageH3Text, .managePText{
+    margin: 0%;
+    font-size: 1.2rem;
+}
+
+@media all and (max-width: 578px) {
+    .getappMainDiv{
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+    }
+    .oneKeyGetappHeading{
+        font-size: 1.5rem;
+    }
+    .oneKeyGetappDiscription{
+        font-size: 1rem;
+    }
+    .getappManageDiv{
+        grid-template-columns: auto;
+        gap: 5%;
+        margin-bottom: 100px;
+    }
+    .getappScannerDiv{
+        flex-direction: column;
+    }
+    .scannerTextMainHeading, .scannerTextSubHeading{
+        font-size: 1.2rem;
+    }
+    .scannerTextDiscription{
+        font-size: .8rem;
+    }
+    .getappSennerImgDiv{
+        width: auto;
+        margin: auto;
+    }
+    .scannerImg{
+        width: 202px;
+    }
+}
+@media all and (min-width: 578px) and (max-width:990px) {
+    .getappManageDiv{
+        grid-template-columns: repeat(2, 44%);
+        gap: 8%;
+    }
+}

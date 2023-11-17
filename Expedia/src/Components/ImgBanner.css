@@ -1,0 +1,63 @@
+.bannerImgMainDiv{
+    margin: auto;
+    width: 95%;
+    margin-top: 30px;
+    position: relative;
+}
+.bannerImg{
+    width: 100%; 
+    border-radius: 20px;
+    filter: brightness(50%);
+    
+}
+.heading-BtnDiv{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    margin-left: 4rem;
+}
+.headingText{
+    color: white;
+    font-size: 48px;
+    margin: 0%;
+}
+.subHeadingText{
+    color: white;
+    /* margin: 0%; */
+}
+.dealsBtn{
+    background-color: #1668e3;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    font-weight: 600;
+    transition: .3s;
+}
+.dealsBtn:hover{
+    background-color: #1157c0;
+    cursor: pointer;
+}
+@media all and (max-width: 578px) {
+    .heading-BtnDiv{
+        top: 70%;
+        width: 95%;
+        margin-left: 10px;
+    }
+    .headingText{
+        font-size: 1.2rem;
+    }
+}
+@media all and (min-width: 578px) and (max-width: 990px){
+    .heading-BtnDiv{
+        width: 80%;
+    }
+    .headingText{
+        font-size: 38px;
+    }
+}

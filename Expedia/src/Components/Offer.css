@@ -1,0 +1,97 @@
+.offerDiv{
+    margin: auto;
+    margin-top: 3rem;
+    width: 93%;
+    background-color: #191e3b;
+    padding: 12px;
+    border-radius: 20px;
+    display: flex;
+}
+.imgDiv{
+    border-radius: 100%;
+    background-color: #191e3b;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+
+}
+.offerK-Img{
+    width: 44px;
+    margin: auto;
+}
+.offerText-BtnsDiv{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.offerTextDiv{
+    margin: auto;
+    width: 80%;
+}
+.offerText{
+    margin: 0%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.btnsDiv{
+    display: flex;
+    margin: auto;
+}
+.signInBtn{
+    background-color: #1668e3;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+    transition: 0.3s;
+}
+.oneKeyBtn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    transition: .3s;
+}
+.signInBtn:hover{
+    background-color: #1157c0;
+    cursor: pointer;
+}
+.oneKeyBtn:hover{
+    cursor: pointer;
+    border-radius: 1.5rem;
+    background-color: #3d425e8a;
+}
+@media all and (max-width: 578px) {
+    .offerDiv{
+        width: 90%;
+    }
+    .offerText-BtnsDiv{
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .btnsDiv{
+        margin: 0%;
+    }
+    .offerTextDiv{
+        margin: 0px 0px 15px;
+        width: 80%;
+    }
+}
+@media all and (min-width: 578px) and (max-width: 990px) {
+    .offerDiv{
+        width: 90%;
+    }
+    .offerText-BtnsDiv{
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .btnsDiv{
+        margin: 0%;
+    }
+    .offerTextDiv{
+        margin: 0px 0px 15px;
+        width: 90%;
+    }
+}

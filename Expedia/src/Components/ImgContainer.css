@@ -1,0 +1,46 @@
+.ImgContainerMainDiv{
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.firstImgContainerDiv, .secondImgContainerDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.firstImgContainerCard{
+    border-radius: 20px;
+    width: 32%;
+}
+.ImgContainerImages{
+    width: 100%;
+    border-radius: 20px;
+}
+.ImgContainerPText{
+    color: #191e3b;
+    font-size: .8rem;
+    margin:5px;
+}
+.ImgContainerH3Text{
+    color: #191e3b;
+    margin: 5px;
+    font-size: 1rem;
+}
+.secondImgContainerCard{
+    width: 49%;
+}
+.firstImgContainerCard:hover, .secondImgContainerCard:hover{
+    cursor: pointer;
+}
+@media all and (max-width: 578px) {
+    .firstImgContainerDiv, .secondImgContainerDiv{
+        flex-direction: column;
+    }
+    .firstImgContainerCard, .secondImgContainerCard{
+        border-radius: 20px;
+        width: 100%;
+    }
+}

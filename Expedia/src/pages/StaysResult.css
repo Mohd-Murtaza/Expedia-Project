@@ -1,0 +1,163 @@
+.staysResultMainDiv{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.staysResultFiltersMainDiv{
+    margin: 20px 0px;
+    width: 25%;
+}
+.showMapDiv{
+    width: 100%;
+    height: 100px;
+}
+.mapouter{
+    position: relative;
+    text-align: right;
+}
+.gmap_canvas{
+    overflow: hidden;
+    background-color: none !important;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.staysResultMainListDiv{
+    width: 70%;
+}
+.sortDiv{
+    display: flex;
+    justify-content: end;
+}
+.priceSortBtn{
+    background-color: #1668e3;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: .5s ease-in-out;
+}
+.priceSortBtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #1668e3;
+    border: 2px solid #1668e3;
+}
+/* Hotel Card style */
+.hotelsCard{
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+.hotelImgDiv{
+    width: 250px;
+}
+.hotelImg{
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.hotelDetailsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.hotelTitle-des{
+    width: 100%;
+}
+.hotelName,.hotelLocality,.hotelAminities{
+    margin: 0px 0px;
+    padding-left: 10px;
+}
+.paymentPoliciesText{
+    padding-left: 10px;
+    color: green;
+}
+.hotelReview-Price{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+.ReviewText,.numReviewText{
+    margin: 12px 0px 12px 0px;
+}
+.offerText{
+    padding: 5px;
+    background-color: green;
+    border-radius: 10px;
+}
+.discountedPrice,.totalPrice{
+    margin: 12px 0px 12px 0px;
+    text-align: end;
+}
+
+
+
+
+
+
+.AddsImg{
+    width: 100%;
+    margin: 20px 0px;
+}
+@media all and (max-width:650px) {
+    .staysResultMainListDiv{
+        width: 90%;
+    }
+    .sortDiv{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hotelsCard{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: auto;
+    }
+    .hotelImgDiv{
+        width: 100%;
+    }
+    .hotelImg{
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+}
+@media all and (min-width: 650px) and (max-width: 1000px) {
+    .staysResultMainListDiv{
+        width: 90%;
+    }
+    .hotelsCard{
+        height: 300px;
+    }
+    .hotelImgDiv{
+        width: 300px;
+    }
+    .hotelImg{
+        width: 300px;
+        height: 300px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .hotelDetailsDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+    }
+}

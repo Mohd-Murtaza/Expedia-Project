@@ -1,0 +1,43 @@
+.footerMainDiv{
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 24px 8px 48px 24px;
+}
+.companyExplorePoliciesHelpMainDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.companyExplorePoliciesHelpMainHeading{
+    color: #191e3b;
+    font-size: small;
+}
+.companyExplorePoliciesHelpSubHeading{
+    color: #1668e3;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: none;
+    margin-top: 15px;
+}
+.companyExplorePoliciesHelpSubHeading:hover{
+    text-decoration: underline;
+}
+.footerHr{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #191e3b;
+}
+.footerLastH6Text{
+    margin: 5px;
+    font-weight: lighter;
+}
+@media all and (max-width: 578px) {
+    .companyExplorePoliciesHelpMainDiv{
+        flex-direction: column;
+    }
+    .footerMainDiv{
+        width: 85%;
+        padding: 10px;
+    }
+}
