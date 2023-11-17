@@ -1,14 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import "@fortawesome/fontawesome-free/css/all.css";
 import './StaysResult.css';
 import StaysSearchBar from '../Components/StaysSearch';
+import { useLocation } from 'react-router-dom';
 
 const StaysResult = () => {
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+  
+
+    const to = queryParams.get('to');
+    const date = queryParams.get('date');
+    const travelers = queryParams.get('travelers');
+  
+    const [dataSet, setDataSet] = useState([]);
+
+    console.log(to)
     const isDesktop=useMediaQuery({minWidth:1200});
     const isTab=useMediaQuery({minWidth:1000});
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        fetch(`http://localhost:3000/${to}`).then(resp=>resp.json())
+        .then(resp=>{
+            console.log(resp)
+            setLoading(false);
+            setDataSet(resp);
+        })
+    }, [to])
+    
+
+
   return (
     <>
     <Navbar/>
@@ -74,30 +100,32 @@ const StaysResult = () => {
                 <button className='priceSortBtn'>price: low to high</button>
                 <button className='priceSortBtn'>price: high to low</button>
             </div>
-            <div className='hotelsCard'>
+            <div className='hotels-list-cont'>
+            {dataSet.map((el, ind)=><div key={ind} className='hotelsCard'>
                 <div className='hotelImgDiv'>
-                    <img className='hotelImg' src="https://images.trvl-media.com/hotels/1000000/540000/531700/531648/55467e67.jpg?impolicy=resizecrop&rw=455&ra=fit" alt="" />
+                    <img className='hotelImg' src={el.img1} alt="" />
                 </div>
                 <div className="hotelDetailsDiv">
                     <div className="hotelTitle-des">
-                        <h3 className='hotelName'>Le Meridien New Delhi</h3>
-                        <h4 className='hotelLocality'>New Delhi</h4>
-                        <p className='hotelAminities'>1 bedroom, 1 bathroom</p>
-                        <h5 className='paymentPoliciesText'>Fully refundable</h5>
-                        <h5 className='paymentPoliciesText'>Reserve now, pay later</h5>
+                        <h3 className='hotelName'>{el.heading1}</h3>
+                        <h4 className='hotelLocality'>{el.heading2}</h4>
+                        <p className='hotelAminities'>{el.text2}</p>
+                        <h5 className='paymentPoliciesText'>{el.text3}</h5>
+                        <h5 className='paymentPoliciesText'>{el.text4}</h5>
                     </div>
                     <div className="hotelReview-Price">
                         <div className="hotelReview">
-                            <h4 className='ReviewText'>Excellent</h4>
-                            <h5 className='numReviewText'>(523 reviews)</h5>
+                            <h4 className='ReviewText'>{el.review}</h4>
+                            <h5 className='numReviewText'>{el.no_of_reviews}</h5>
                         </div>
                         <div className="hotelPrice">
-                            <span className='offerText'>We have 5 left at</span>
-                            <h4 className='discountedPrice'>Rs8,650</h4>
-                            <h5 className='totalPrice'>10207</h5>
+                            <span className='offerText'>{el.heading3}</span>
+                            <h4 className='discountedPrice'>{el.price1}</h4>
+                            <h5 className='totalPrice'>{el.price2}</h5>
                         </div>
                     </div>
                 </div>
+            </div>)}
             </div>
         </div>
         {isDesktop?(<div className='staysResultAddsBannerDiv'>

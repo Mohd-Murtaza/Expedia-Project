@@ -55,7 +55,6 @@
 .hotelsCard{
     display: flex;
     justify-content: space-between;
-    height: 250px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
 }
@@ -105,7 +104,13 @@
 
 
 
-
+.hotels-list-cont
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    /* height: auto; */
+}
 
 
 .AddsImg{

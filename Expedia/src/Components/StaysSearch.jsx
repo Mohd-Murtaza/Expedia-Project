@@ -1,28 +1,35 @@
 import "./StaysSearch.css";
-
+import { useNavigate } from 'react-router-dom';
 import "@fortawesome/fontawesome-free/css/all.css";
 import { useState } from "react";
 const StaysSearchBar = () => {
-  const [location, setLocation] = useState("Going to");
+  const [location, setLocation] = useState("");
   const [date, setDate] = useState("Date");
   const [travelers, setTravelers] = useState("Travelers");
   const [clickLocationDiv, setClickLocationDiv] = useState(false);
   const [clickDateDiv, setClickDateDiv] = useState(false);
   const [clickTravelersDiv, setClickTravelersDiv] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleSearch = () => {
     if (!clickLocationDiv) {
       alert(`please enter your Location`);
+      return
     }
     if (!clickDateDiv) {
       alert(`Please enter the Date`);
+      return;
     }
     if (!clickTravelersDiv) {
       alert(`Please enter the Travelers quantity`);
+      return
     }
     setClickLocationDiv(false);
     setClickDateDiv(false);
     setClickTravelersDiv(false);
+
+    navigate(`/stays-results?to=${location}&date=${date}&travelers=${travelers}`);
   };
   return (
     <div className="StaysSearchBarMainDiv">
@@ -41,6 +48,7 @@ const StaysSearchBar = () => {
               value={location}
               name=""
               id=""
+              placeholder="Going to"
             />
           ) : (
             <>
