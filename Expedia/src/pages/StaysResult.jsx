@@ -18,14 +18,13 @@ const StaysResult = () => {
   
     const [dataSet, setDataSet] = useState([]);
 
-    console.log(to)
     const isDesktop=useMediaQuery({minWidth:1200});
     const isTab=useMediaQuery({minWidth:1000});
 
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/${to}`).then(resp=>resp.json())
+        fetch(`https://expedia-mock-server.onrender.com/${to}`).then(resp=>resp.json())
         .then(resp=>{
             console.log(resp)
             setLoading(false);
